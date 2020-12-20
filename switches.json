@@ -1,0 +1,377 @@
+{
+    "switches": [
+        {
+            "name":"remoteControl",
+            "plc": "0x01", 
+            "plc_channel": "0x00",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"fanSwitch01",
+            "plc": "0x01", 
+            "plc_channel": "0x01",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"fanSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x02",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"fanSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x03",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"fanSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x04",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"fanSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x05",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x06",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x07",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x08",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x09",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x0A",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEastSwitch06",
+            "plc": "0x01",
+            "plc_channel": "0x0B",
+            "reg_len":"0x2"
+        },
+        {
+            "name":"innerEdgeSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x0C",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEdgeSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x0D",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEdgeSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x0E",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEdgeSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x0F",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerEdgeSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x10",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x11",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x12",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x13",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x14",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x15",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"innerWestSwitch06",
+            "plc": "0x01",
+            "plc_channel": "0x16",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"ledSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x17",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"ledSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x18",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"ledSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x19",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"ledSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x1A",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"ledSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x1B",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x1C",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x1D",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x1E",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x1F",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x20",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEastSwitch06",
+            "plc": "0x01",
+            "plc_channel": "0x21",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEdgeSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x22",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEdgeSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x23",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEdgeSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x24",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEdgeSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x25",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outEdgeSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x26",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x27",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x28",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x29",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x2A",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x2B",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"outWestSwitch06",
+            "plc": "0x01",
+            "plc_channel": "0x2C",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"sideWindowSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x2D",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"sideWindowSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x2E",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"sideWindowSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x2F",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"sideWindowSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x30",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"sideWindowSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x31",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"skylightSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x32",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"skylightSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x33",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"skylightSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x34",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"skylightSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x35",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"skylightSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x36",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"wetCurtainSwitch01",
+            "plc": "0x01",
+            "plc_channel": "0x37",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"wetCurtainSwitch02",
+            "plc": "0x01",
+            "plc_channel": "0x38",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"wetCurtainSwitch03",
+            "plc": "0x01",
+            "plc_channel": "0x39",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"wetCurtainSwitch04",
+            "plc": "0x01",
+            "plc_channel": "0x3A",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"wetCurtainSwitch05",
+            "plc": "0x01",
+            "plc_channel": "0x3B",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"waterFertilizerSwitch",
+            "plc": "0x01",
+            "plc_channel": "0x3C",
+            "reg_len":"0x1"
+        },
+        {
+            "name":"waterFertilizerPressure",
+            "plc": "0x01",
+            "plc_channel": "0xFF",
+            "plc_channel_ro": "0x3D",
+            "reg_len":"0x1"
+        }
+    ]
+}
