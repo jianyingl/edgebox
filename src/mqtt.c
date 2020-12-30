@@ -87,20 +87,15 @@ void iothubMsgEnQ(char *msg, int msg_len)
     pthread_mutex_lock(&hubmsg_mutex);
 
     /* If queue is empty before insert */
-    if (p_hubmsg_q_head == NULL)
-    {
-        p_hubmsg_q_head = msg_node_ptr;
-        
-        /* notify the message handling thread */
-        //sem_post(&sem_empty_q);
+    if (p_hubmsg_q_head == NULL) {
+        p_hubmsg_q_head = msg_node_ptr;       
     }
 
-    if (p_hubmsg_q_tail != NULL)
-    {
+    if (p_hubmsg_q_tail != NULL) {
         p_hubmsg_q_tail->next = msg_node_ptr;
     }
 
-    // tail always points to the new inserted node 
+    /* tail always points to the new inserted node */
     p_hubmsg_q_tail = msg_node_ptr;
 
     /* unlock the Queue */
@@ -120,17 +115,13 @@ void iothubMsgDeQ(iothubmsg_node **node_ptr)
     /* lock the queue */
     pthread_mutex_lock(&hubmsg_mutex);
 
-    if (p_hubmsg_q_head != NULL)
-    {
+    if (p_hubmsg_q_head != NULL) {
         *node_ptr = p_hubmsg_q_head;
 
-        if (p_hubmsg_q_head == p_hubmsg_q_tail)
-        {
+        if (p_hubmsg_q_head == p_hubmsg_q_tail) {
             p_hubmsg_q_head = NULL;
             p_hubmsg_q_tail = NULL;
-        }
-        else
-        {
+        } else {
             p_hubmsg_q_head = p_hubmsg_q_head->next;
         }
     }
@@ -149,13 +140,10 @@ void *iot_msg_handler_thread(void *arg_ptr)
 {
     iothubmsg_node *node_ptr;
 
-    while (1)
-    {
+    while (1) {
         /* check if message queue is empty */
-        if (p_hubmsg_q_head == NULL)
-        {
-        /* wait if the message queue is empty */
-            //sem_wait(&sem_empty_q);
+        if (p_hubmsg_q_head == NULL) {
+            /* wait if the message queue is empty */
             poll(0, 0, 20);
             continue;
         }
@@ -204,11 +192,9 @@ void process_single_iot_hub_msg(char *json_text)
     struct switch_node *list_head = NULL;
     cJSON *current_element = NULL;
     char *current_key = NULL;
-    cJSON_ArrayForEach(current_element, params)
-    {
+    cJSON_ArrayForEach(current_element, params) {
         current_key = current_element->string;
-        if (current_key != NULL)
-        {
+        if (current_key != NULL) {
 
             if (strcmp(current_key, "loraNodeSerialNo") == 0) {
                 strcpy(loranodesn, current_element->valuestring);
@@ -222,7 +208,6 @@ void process_single_iot_hub_msg(char *json_text)
                     memcpy(q, p, sizeof(struct switch_node));
                     LOG_DEBUG2("key = %s, type = %d", current_key, current_element->type);
                     if (current_element->type == cJSON_Number) {
-
                         /* special case for some float value */
                         if (strcmp(current_element->string, "waterFertilizerPressure") == 0) {
                             q->v.intv = current_element->valuedouble * 10;
@@ -306,8 +291,6 @@ int mqtt_conn_init()
     LOG_INFO("    username: %s", username);
     LOG_INFO("    password: %s", password);
 
-
-
     /* network init and establish network to aliyun IoT platform */
     NetworkInit(&mnet);
     rc = NetworkConnect(&mnet, hostname, port);
@@ -352,34 +335,6 @@ int mqtt_conn_init()
         return -1;
     }
 
-/*
-    int cnt = 0;
-    unsigned int msgid = 0;
-    while (!toStop)
-    {
-        MQTTYield(&mclient, 1000);    
-
-        if (++cnt % 5 == 0) {
-            MQTTMessage msg = {
-                QOS1, 
-                0,
-                0,
-                0,
-                "Hello world",
-                strlen("Hello world"),
-            };
-            msg.id = ++msgid;
-            rc = MQTTPublish(&mclient, pubTopic, &msg);
-            printf("MQTTPublish %d, msgid %d\n", rc, msgid);
-        }
-    }
-
-    printf("Stopping\n");
-
-    MQTTDisconnect(&mclient);
-    NetworkDisconnect(&mnet);
-
-*/
     return 0;
 }
 
@@ -423,7 +378,7 @@ void eb_report_temp_hum(short rawtemp, unsigned short rawhum)
     LOG_DEBUG2("raw temp = %d, raw hum = %x", rawtemp, rawhum);
 
     temperature = (float)rawtemp / 10.0;
-    humidity = (float)rawhum /10.0;
+    humidity = (float)rawhum / 10.0;
     char weather_format[]="{\"id\":%d,\"params\":{\"loraNodeSerialNo\":\"%s\",\"temperature\":%.1f,\"humidity\":%.1f},\"method\":\"thing.event.property.post\"}";
     sprintf(weather_json, weather_format, msgid_in_payload++, "00000000", temperature, humidity);
 
